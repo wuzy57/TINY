@@ -14,13 +14,13 @@ using namespace std;
 
 enum class TOKEN_TYPE {
     NONE, ANNOTATION,
-    KEY_TRUE, KEY_FALSE, // true false
-    KEY_OR, KEY_AND, KEY_NOT, // or and not
-    KEY_INT, KEY_BOOL, KEY_STRING, // int bool string
-    KEY_DO, KEY_WHILE, // do while
-    KEY_REPEAT, KEY_UNTIL, // repeat until
-    KEY_IF, KEY_THEN, KEY_ELSE, KEY_END, // if then else end
-    KEY_READ, KEY_WRITE, // read write
+    KEY_TRUE, KEY_FALSE,
+    KEY_OR, KEY_AND, KEY_NOT,
+    KEY_INT, KEY_BOOL, KEY_STRING,
+    KEY_DO, KEY_WHILE,
+    KEY_REPEAT, KEY_UNTIL,
+    KEY_IF, KEY_THEN, KEY_ELSE, KEY_END,
+    KEY_READ, KEY_WRITE,
 
     OP_GTR, OP_LSS, // > <
     OP_LEQ, OP_GEQ, OP_EQU, // <= >= =
@@ -351,7 +351,7 @@ private:
 };
 
 bool scan(string filename) {
-    compile_error = false; // 重置错误状态
+    compile_error = false;
     ifstream in(filename);
     if (!in) {
         cout << "can not open file!" << endl;
